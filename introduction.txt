@@ -1,0 +1,5 @@
+Welcome to the pokemon Shiny Hunting WEB Application
+
+I've started this app because i don't really like others.
+
+I will update this once in a while, but feel free to improve it too!
