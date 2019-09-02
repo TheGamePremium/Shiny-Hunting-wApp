@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="mobile.png" />
+    <title>DI-X Shiny Hunting</title>
+    <link rel="stylesheet" href="estilos2.css">
+    <script type="text/javascript">
+    
+    
+        if(localStorage.clickcount != null){
+        window.onload = function() {
+    localStorage.clickcount = Number(localStorage.clickcount)+0;
+    document.getElementById("result").innerHTML = "SR's: " + localStorage.clickcount;
+};
+        } else{
+        localStorage.clickcount = 0;
+            window.location.reload(true);
+        };
+        
+    </script>
+</head>
+<body id="body">
+
+     <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="index2-pokeradar.html">Pokeradar</a>
+    <a href="index2.html">Soft Reset</a>
+    <a href="index2-shinyditto.html">Shiny Ditto</a>
+    <a href="index2-cutecharm.html">Cute charm abuse</a>
+    <a href="index2-masudamethod.html">Masuda Method</a>
+    <a href="index2-fishing.html">Fishing chain</a>
+    <a href="index2-friendsafari.html">Friend Safari</a>
+    <a href="index2-horde.html">Horde Encounter</a>
+    <a href="index2-horde2.html">Horde Encounter 2</a>
+    <a href="index2-soschain.html">S.O.S Chain</a>
+    <a href="index2-ultrawormhole.html">Ultraworm hole</a>
+  </div>
+</div>
+
+
+
+<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+</script>
+ 
+
+
+<div class="navbar">
+        <ul><img src="sun.png" alt="" id="dark-mode" onClick="darkMode()" ondblclick="restart()">
+           <span onclick="openNav()"><img src="xD.png" alt="change method" id="img1"></span>
+<!--            <li><a href="index.html" id="hola1">Home</a></li>-->
+<!--
+            <li><a href="abbreviations.html" id="hola2">Abbreviations</a></li>
+            <li><a href="methods.html" id="hola3">Methods</a></li>
+            <li><a href="contact.html" id="hola4">Contact me!</a></li>
+-->
+  <div class="autocomplete">
+<!--
+  <input id="myInput" type="text" name="myCountry" placeholder="Find a Pokemon..." class="searchpkmn">
+  <input type="submit" class="ok2" value="OK" onClick="">
+  <input type="submit" class="ok2" value="Hide" onClick="">
+-->
+  <script type="text/javascript">
+      
+      </script>
+      <div id="myImage"></div>
+  </div>
+<script>
+   function darkMode(){
+   document.getElementById("body").style.background = "#272e36";
+   document.getElementById("result").style.color = "white";
+   document.getElementById("start").style.background = "#272e36";
+   document.getElementById("start").style.color = "white";
+   document.getElementById("img1").src = "xD22.png";
+    document.getElementById("dark-mode").src = "moon.png";
+    document.getElementById("myNav").style.background = "white";
+    document.getElementById("i1-1").style.background = "#e95a5a";
+    document.getElementById("ok1").style.background = "#598fb6";
+    document.getElementById("i1--1").style.background = "#46b9a2";
+    document.getElementById("reset").style.background = "#b887c4";
+    document.getElementById("hola4").style.color = "white";
+    document.getElementById("hola3").style.color = "white";
+    document.getElementById("hola2").style.color = "white";
+    document.getElementById("hola1").style.color = "white";
+       
+    document.getElementById("myInput").style.backgroundColor = "#272e36";
+    document.getElementById("myInput").style.color = "white";
+    
+
+   };   
+    function restart(){
+        window.location.reload(true);
+    }
+   </script>
+    </ul>
+    
+    
+
+  
+      
+<!-- STYLE SEARCHING POKEMON
+  <style>
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+#myInput{
+font-family: 'Raleway', sans-serif;
+border:none;
+}
+      #myInput:focus{
+      outline:0;
+      }  
+      
+      
+     
+.ok2{
+padding:3px;
+
+background-color:#46b9a2;
+font-family: 'Raleway', sans-serif;
+
+    font-size:16px;
+border:none;
+color:white;
+    }
+
+.autocomplete {
+  margin-left:22px;
+  position: relative;
+  display: inline-block;
+font-family: 'Roboto Mono', monospace;
+    float:right;
+    padding-right:10px;
+    padding-top:10px;
+}
+
+.autocomplete-items {
+    font: 16px Arial;
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+    font: 16px Arial;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+.autocomplete-items div:hover {
+    font: 16px Arial;
+    border:None;
+      background-color: #46b9a2 !important; 
+  Color:white;
+}
+      .ok2:focus{
+      outline:0;
+      }
+    </style>
+-->
+                    
+  <script>
+function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+/*An array containing all the country names in the world:*/
+var pkmn = ["Bulbasaur","Ivysaur","Venusaur","Charmander","Charmeleon","Charizard","Squirtle","Wartortle","Blastoise","Caterpie","Metapod","Butterfree","Weedle","Kakuna","Pidgey","Pidgeotto","Pidgeot","Rattata","Raticate","Spearow","Fearow","Ekans","Arbok","Pikachu","Raichu","Sandshrew","Sandslash","Nidoran-female","Nidorina","Nidoqueen","Nidoran-male","Nidorino","Nidoking","Clefairy","Clefable","Vulpix","Ninetales","Jigglypuff","Wiggytuff","Zubat","Golbat","Oddish","Gloom","Vileplume","Paras","Parasect","Venonat","Venomoth","Diglett","Dugtrio","Meowth","Persian","Psyduck","Golduck","Mankey","Primeape","Growlithe","Arcanine","Poliwag","Poliwhirl","Poliwrath","Abra","Kadabra","Alakazam","Machop","Machoke","Machamp","Bellsprout","Weepinbell","Victreebel","Tentacool","Tentacruel","Geodude","Graveler","Golem","Ponyta","Rapidash","Slowpoke","Slowbro","Magnemite","Magneton","Farfetch'd","Doduo","Dodrio","Seel","Dewgong","Grimer","Muk","Shellder","Cloyster","Gastly","Haunter","Gengar","Onix","Drowzee","Hypno","Krabby","Kingler","Voltorb","Electrode","Exeggutor","Cubone","Marowak","Hitmonlee","Hitmonchan","Lickitung","Koffing","Weezing","Rhyhorn","Ryhdon","Chansey","Tangela","Kangashkan","Horsea","Seadra","Goldeen","Seaking","Staryu","Starmie","Mr.Mime","Scyther","Jynx","Electabuzz","Magmar","Pinsir","Tauros","Magikarp","Gyarados","Lapras","Ditto","Eevee","Vaporeon","Jolteon","Flareon","Porygon","Omanyte","Omastar","Kabuto","Kabutops","Aerodactyl","Snorlax","Articuno","Zapdos","Moltres","Dratini","Dragonair","Dragonite","Mewtwo","Mew","Torchic"];
+
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput"), pkmn);
+      
+
+
+</script>
+            
+<!--Make sure the form has the autocomplete function switched off:-->
+
+
+
+        </ul>
+        
+    </div>
+
+<div class="hola1">
+     
+      <div id="result" class="texto1"></div>
+    <button type="button" onClick="clickCounter()" id="i1--1">+1 SR</button>
+    <button type="button" onClick="clickCounter2()" id="i1-1">-1 SR</button><br><br>
+    <input type="number" placeholder="Start from number... " id="start" method="get" >
+    <input type="submit" value="OK" id="ok1" onclick="getNumber()">
+    <input type="button" onClick="limpiar()" id="reset" value="RESET">
+
+</form>
+    
+<script>
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "SR's: " + localStorage.clickcount;
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+};
+
+function clickCounter2() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)-1;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "SR's: " + localStorage.clickcount;
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+};
+    function limpiar(){
+    localStorage.clear();
+    location.reload();
+    };
+    
+    function getNumber(){
+    var newNumber = parseInt(document.getElementById("start").value);
+    localStorage.clickcount = Number(newNumber);
+    document.getElementById("result").innerHTML = "SR's: " + localStorage.clickcount;
+    }
+
+    
+</script>
+    </div>
+</body>
+</html>

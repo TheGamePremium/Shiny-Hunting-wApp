@@ -1,0 +1,15 @@
+
+
+Encontrar un nombre de archivo que comparta el mismo nombre en una carpeta correspondiente a la generación de este pokemon.
+
+Hacer mostrar los dos archivos de la carpeta
+
+
+images/gen1/bulbasaur1.gif
+images/gen2/lugia2.gif
+
+variable pkmn + "1" + ".gif"; --> bulbasaur1.gif (Normal)
+variable pkmn + "2" + ".gif"; --> bulbasaur2.gif (Shiny)
+
+
+

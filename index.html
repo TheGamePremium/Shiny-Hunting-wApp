@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shiny Hunting</title>
+    <link rel="stylesheet" href="estilos3.css">
+    <link rel="icon" href="star.png">
+</head>
+<body>
+<div class="contenedor">
+     <script type="text/javascript">
+
+window.onload = function() {
+
+  document.getElementById('foo').addEventListener('click', function (e) {
+    var img = document.createElement('img');
+    img.setAttribute('src', 'https://dmg-inc.com/');
+    e.target.appendChild(img);
+  });
+
+};
+
+</script>
+   <img src="dmg-inc.png" alt="Damage Incorporation" height="200" width="200" id="foo">
+
+    <p class="hola">Hello there! Welcome to the world of Pokemon!</p>
+    
+    <p>My name is Celest! People call me the Pokémon Prof!</p>
+    
+    <p>This world is inhabited by creatures called Pokémon!</p>
+    
+    <p>But we only hunt the <a target=_blank href="#">shiny</a> ones!</p>
+    <form action="index2.html">
+    
+    <input type="submit" class="submit" value="Let's go!"></form>
+    
+</div>
+
+</body>
+
+</html>

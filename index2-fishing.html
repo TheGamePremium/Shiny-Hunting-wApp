@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <link rel="shortcut icon" type="image/x-icon" href="mobile.png" />
+    <title>DI-X Shiny Hunting</title>
+    <link rel="stylesheet" href="estilos2.css">
+    <script type="text/javascript">
+ if(localStorage.clickcount != null){
+        window.onload = function() {
+    localStorage.clickcount = Number(localStorage.clickcount)+0;
+    document.getElementById("result").innerHTML = "Chain of: " + localStorage.clickcount;
+};
+        } else{
+        localStorage.clickcount = 0;
+            window.location.reload(true);
+        };
+    </script>
+</head>
+<body id="body">
+
+     <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="index2-pokeradar.html">Pokeradar</a>
+    <a href="index2.html">Soft Reset</a>
+    <a href="index2-shinyditto.html">Shiny Ditto</a>
+    <a href="index2-cutecharm.html">Cute charm abuse</a>
+    <a href="index2-masudamethod.html">Masuda Method</a>
+    <a href="index2-fishing.html">Fishing chain</a>
+    <a href="index2-friendsafari.html">Friend Safari</a>
+    <a href="index2-horde.html">Horde Encounter</a>
+        <a href="index2-horde2.html">Horde Encounter 2</a>
+    <a href="index2-soschain.html">S.O.S Chain</a>
+    <a href="index2-ultrawormhole.html">Ultraworm hole</a>
+  </div>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+</script>
+ 
+<header id="main-header">
+   
+<!--    <h2>SHINY HUNTING TOOL V.1</h2>-->
+<!--    <input type="number" placeholder="Find a pokemon...">-->
+</header>
+<div class="navbar">
+        <ul>
+          <ul><img src="sun.png" alt="" id="dark-mode" onClick="darkMode()" ondblclick="restart()">
+           <span onclick="openNav()"><img src="xD.png" alt="change method" id="img1"></span>
+            <li><a href="index.html" id="hola1">Home</a></li>
+            <li><a href="abbreviations.html" id="hola2">Abbreviations</a></li>
+            <li><a href="methods.html" id="hola3">Methods</a></li>
+            <li><a href="contact.html" id="hola4">Contact me!</a></li>
+            <script>
+   function darkMode(){
+   document.getElementById("body").style.background = "#2e2f34";
+   document.getElementById("result").style.color = "white";
+   document.getElementById("start").style.background = "#2e2f34";
+   document.getElementById("start").style.color = "white";
+   document.getElementById("img1").src = "xD22.png";
+    document.getElementById("dark-mode").src = "moon.png";
+    document.getElementById("myNav").style.background = "white";
+           document.getElementById("hola4").style.color = "white";
+    document.getElementById("hola3").style.color = "white";
+    document.getElementById("hola2").style.color = "white";
+    document.getElementById("hola1").style.color = "white";
+           document.getElementById("i1-1").style.background = "#e95a5a";
+    document.getElementById("ok1").style.background = "#598fb6";
+    document.getElementById("i1--1").style.background = "#46b9a2";
+    document.getElementById("reset").style.background = "#b887c4";
+   };   
+    function restart(){
+        window.location.reload(true);
+    }
+   </script>
+        </ul>
+    </div>
+
+
+<div class="hola1">
+     
+      <div id="result" class="texto1"></div>
+    <button type="button" onClick="clickCounter()" id="i1--1">+1 SR</button>
+    <button type="button" onClick="clickCounter2()" id="i1-1">-1 SR</button><br><br>
+    <input type="number" placeholder="Start from number... " id="start" method="get" >
+    <input type="submit" value="OK" id="ok1" onclick="getNumber()">
+    <input type="button" onClick="limpiar()" id="reset" value="RESET">
+    
+<script>
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "Chain of: " + localStorage.clickcount;
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+};
+function clickCounter2() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)-1;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "Chain of: " + localStorage.clickcount;
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+};
+    function limpiar(){
+    localStorage.clear();
+    location.reload();
+    };
+    
+    function getNumber(){
+    var newNumber = parseInt(document.getElementById("start").value);
+    localStorage.clickcount = Number(newNumber);
+    document.getElementById("result").innerHTML = "Chain of: " + localStorage.clickcount;
+    }
+
+    
+</script>
+    </div>
+</body>
+</html>

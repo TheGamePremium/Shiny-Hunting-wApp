@@ -1,0 +1,221 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Gamja+Flower');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+/*
+font-family: 'Gamja Flower', cursive;
+    font-family: 'Raleway', sans-serif;
+font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Slab', serif;
+font-family: 'Lato', sans-serif;
+
+*/
+
+*{
+padding:0;
+margin:0;
+      box-sizing: border-box;
+
+}
+body{
+overflow: hidden;
+box-sizing: border-box;
+width:100%;
+}
+/*
+#main-header{
+background-color:#4a7a9d;
+height:65px;
+width:100%;
+padding-top:1.2%;
+color:white;
+font-family: 'Montserrat', sans-serif;
+text-align: center;
+}
+*/
+#i1--1{
+    background-color:#5c88c5;
+    border:none;
+    border-radius:13px;
+    height:125px;
+    width:312.5px;
+    color:white;
+        font-family: 'Roboto', sans-serif;
+    font-size:49px;
+    cursor: pointer;
+}
+#i1--1:focus{outline:0px;}
+#i1-1:focus{outline:0px;}
+#i1-1{
+    background-color:#f58b7b;
+    border:none;
+    border-radius:13px;
+    height:125px;
+    width:312.5px;
+    color:white;
+        font-family: 'Roboto', sans-serif;
+    font-size:49px;
+    cursor: pointer;
+}
+#clicks{
+color:#4a7a9d;
+}
+input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
+input:focus::-webkit-input-placeholder { color:transparent; }
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+    display: none;
+}
+.hola1{
+    font-family: 'Montserrat', sans-serif;
+    font-size:42px;
+    text-align: center;
+    margin-top:10.85%;
+    margin-bottom:2%;
+}
+.texto1{
+font-family: 'Roboto', sans-serif;
+color:darkslategrey;
+    font-size:49px;
+    margin-bottom:2.5%;
+    padding-right:0.5%;
+}
+#start{
+height:35px;
+width:20%;
+font-family: 'Raleway', sans-serif;
+
+    font-size:20px;
+padding-left:19px;
+border:none;
+border-radius:4.3px;
+}
+#start:focus{outline:0;}
+#ok1{
+height:37px;
+width:5%;
+background-color:#42cb6f;
+font-family: 'Raleway', sans-serif;
+
+    font-size:21px;
+border:none;
+border-radius:4.3px;
+color:white;
+}
+#ok1:hover{background-color:#99d468;cursor:pointer;transition-duration:0.8s;}
+#ok1:focus{outline:0;}
+#reset{
+height:37px;
+width:5%;
+background-color:#f77d4c;
+font-family: 'Raleway', sans-serif;
+
+    font-size:21px;
+border:none;
+border-radius:4.3px;
+color:white;
+}
+#reset:hover{background-color:#ed5564;cursor:pointer;transition-duration:0.8s;}
+#reset:focus{outline:0;}
+
+.overlay {
+    height: 0%;
+    width: 25%;
+    position:fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 11%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    
+    
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+span{
+padding-left:20px;
+font-size:32px;
+cursor:pointer;
+}
+.navbar{
+background-color:transparent;
+        text-align: left;
+    font-family: 'Roboto', sans-serif;
+padding-bottom:6px;
+}
+li{
+    display: inline;
+    padding-left:13px;
+padding-bottom:6px;
+}
+a{
+    text-decoration: none;
+    list-style: none;
+    color:slategrey;
+    padding-top:6px;
+}
+
+#dark-mode{
+padding-left:10px;
+}
+#dark-mode:hover{
+cursor: pointer;
+}
+
+
+
+
